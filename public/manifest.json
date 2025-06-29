@@ -1,0 +1,32 @@
+{
+  "name": "MathChain Epoch - 数链纪元",
+  "short_name": "MathChain",
+  "description": "数学消除游戏 - 智慧挑战，无限可能",
+  "theme_color": "#0ea5e9",
+  "background_color": "#1e40af",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["games", "education"],
+  "lang": "zh-CN",
+  "dir": "ltr"
+}

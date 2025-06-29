@@ -1,0 +1,62 @@
+{
+  "name": "mathchain-epoch",
+  "version": "1.0.0",
+  "description": "MathChain Epoch - 数链纪元数学消除游戏",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest",
+    "mobile:init": "npx cap init",
+    "mobile:add:android": "npx cap add android",
+    "mobile:add:ios": "npx cap add ios",
+    "mobile:sync": "npx cap sync",
+    "mobile:build:android": "npm run build && npx cap sync && npx cap open android",
+    "mobile:build:ios": "npm run build && npx cap sync && npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.6.0",
+    "@capacitor/core": "^5.6.0",
+    "@capacitor/haptics": "^5.0.6",
+    "@capacitor/ios": "^5.6.0",
+    "@capacitor/status-bar": "^5.0.6",
+    "canvas-confetti": "^1.9.2",
+    "framer-motion": "^10.16.16",
+    "gsap": "^3.12.2",
+    "howler": "^2.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.6.0",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/howler": "^2.2.11",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vitest": "^1.0.4"
+  },
+  "keywords": [
+    "game",
+    "math",
+    "puzzle",
+    "education",
+    "mobile",
+    "cross-platform"
+  ],
+  "author": "MathChain Team",
+  "license": "MIT"
+}
