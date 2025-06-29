@@ -1,56 +1,43 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import App from './App.test.tsx'
 
-console.log('Main.tsx loaded');
-
-// 简单的内联组件
-const SimpleApp = () => {
-  console.log('SimpleApp component rendering');
-  return React.createElement('div', {
-    style: {
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: '#1e40af',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: 'white',
-      fontFamily: 'Arial, sans-serif',
-      textAlign: 'center'
-    }
-  }, [
-    React.createElement('h1', { key: 'title', style: { fontSize: '48px', marginBottom: '20px' } }, 'MathChain Epoch'),
-    React.createElement('h2', { key: 'subtitle', style: { fontSize: '24px', marginBottom: '20px' } }, '数链纪元'),
-    React.createElement('p', { key: 'message', style: { fontSize: '18px' } }, '页面加载成功！🎉'),
-    React.createElement('button', {
-      key: 'button',
-      style: {
-        padding: '10px 20px',
-        fontSize: '16px',
-        backgroundColor: '#10b981',
-        color: 'white',
-        border: 'none',
-        borderRadius: '8px',
-        cursor: 'pointer',
-        marginTop: '20px'
-      },
-      onClick: () => {
-        alert('React应用正常工作！');
-        console.log('Button clicked successfully');
-      }
-    }, '测试按钮')
-  ]);
-};
+console.log('🚀 Main.tsx loaded');
+console.log('📦 React version:', React.version);
 
 const rootElement = document.getElementById('root');
-console.log('Root element:', rootElement);
+console.log('🎯 Root element found:', !!rootElement);
 
 if (rootElement) {
+  console.log('🔧 Creating React root...');
   const root = ReactDOM.createRoot(rootElement);
-  console.log('React root created');
 
-  root.render(React.createElement(SimpleApp));
-  console.log('App rendered');
+  console.log('🎨 Rendering App component...');
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+  console.log('✅ App rendered successfully!');
 } else {
-  console.error('Root element not found!');
+  console.error('❌ Root element not found!');
+  // 创建一个备用的根元素
+  const fallbackRoot = document.createElement('div');
+  fallbackRoot.id = 'fallback-root';
+  fallbackRoot.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #dc2626;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+  `;
+  fallbackRoot.innerHTML = '<h1>❌ 根元素未找到！请检查HTML文件。</h1>';
+  document.body.appendChild(fallbackRoot);
 }
