@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { DifficultyLevel } from '@/types/game';
+import { DifficultyLevel } from '../../types/game';
 
 interface MainMenuProps {
   onStartGame: (difficulty: DifficultyLevel) => void;

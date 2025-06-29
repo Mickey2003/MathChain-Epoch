@@ -8,7 +8,7 @@ import {
   GameStats,
   Animation,
   ParticleEffect
-} from '@/types/game';
+} from '../types/game';
 
 interface GameStore extends GameState {
   // 游戏控制

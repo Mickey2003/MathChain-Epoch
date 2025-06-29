@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
+import { useGameStore } from '../../store/gameStore';
 
 const ParticleSystem: React.FC = () => {
   const { particles, removeParticle } = useGameStore();

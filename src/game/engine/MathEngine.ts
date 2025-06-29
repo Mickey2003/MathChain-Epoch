@@ -1,4 +1,4 @@
-import { DifficultyLevel, MathOperation, MathExpression } from '@/types/game';
+import { DifficultyLevel, MathOperation, MathExpression } from '../../types/game';
 
 export class MathEngine {
   private static instance: MathEngine;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import { useGameStore } from '@/store/gameStore';
+import { useGameStore } from '../../store/gameStore';
 
 interface GameOverScreenProps {
   onRestart: () => void;
