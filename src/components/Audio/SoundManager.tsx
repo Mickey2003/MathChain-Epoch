@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Howl } from 'howler';
-import { useGameStore } from '@/store/gameStore';
-import { SoundEffect } from '@/types/game';
+import { useGameStore } from '../../store/gameStore';
+import { SoundEffect } from '../../types/game';
 
 // 音效文件映射（这里使用Web Audio API生成的音效）
 // const createBeepSound = (frequency: number, duration: number, type: OscillatorType = 'sine') => {

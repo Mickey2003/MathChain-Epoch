@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
-import { DifficultyLevel } from '@/types/game';
+import { useGameStore } from '../../store/gameStore';
+import { DifficultyLevel } from '../../types/game';
 
 interface StatsModalProps {
   onClose: () => void;

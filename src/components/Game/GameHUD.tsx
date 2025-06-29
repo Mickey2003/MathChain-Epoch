@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
+import { useGameStore } from '../../store/gameStore';
 
 interface GameHUDProps {
   onPause: () => void;

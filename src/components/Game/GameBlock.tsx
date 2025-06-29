@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GameBlock } from '@/types/game';
+import { GameBlock } from '../../types/game';
 
 interface GameBlockProps {
   block: GameBlock;

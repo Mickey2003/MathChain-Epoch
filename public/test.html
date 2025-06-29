@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathChain Epoch - 测试页面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a, #7c3aed, #4338ca);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #059669;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MathChain Epoch</h1>
+        <h2>数链纪元</h2>
+        <p>静态测试页面 - 如果您能看到这个页面，说明服务器正常工作</p>
+        <button onclick="testFunction()">测试JavaScript</button>
+        <div class="status" id="status">
+            等待测试...
+        </div>
+    </div>
+
+    <script>
+        console.log('测试页面JavaScript已加载');
+        
+        function testFunction() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = '✅ JavaScript正常工作！<br>时间: ' + new Date().toLocaleString();
+            console.log('测试函数执行成功');
+        }
+
+        // 页面加载完成后的测试
+        window.addEventListener('load', function() {
+            console.log('页面加载完成');
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = '✅ 页面加载完成<br>时间: ' + new Date().toLocaleString();
+        });
+
+        // 检测React相关依赖
+        setTimeout(function() {
+            const statusDiv = document.getElementById('status');
+            let status = '✅ 页面加载完成<br>';
+            
+            if (typeof window.React !== 'undefined') {
+                status += '✅ React已加载<br>';
+            } else {
+                status += '❌ React未加载<br>';
+            }
+            
+            if (typeof window.ReactDOM !== 'undefined') {
+                status += '✅ ReactDOM已加载<br>';
+            } else {
+                status += '❌ ReactDOM未加载<br>';
+            }
+            
+            status += '时间: ' + new Date().toLocaleString();
+            statusDiv.innerHTML = status;
+        }, 1000);
+    </script>
+</body>
+</html>

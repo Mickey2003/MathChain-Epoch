@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
-import { DifficultyLevel } from '@/types/game';
+import { useGameStore } from './store/gameStore';
+import { DifficultyLevel } from './types/game';
 
 // 组件导入
-import GameBoard from '@/components/Game/GameBoard';
-import GameHUD from '@/components/Game/GameHUD';
-import MainMenu from '@/components/UI/MainMenu';
-import PauseMenu from '@/components/UI/PauseMenu';
-import GameOverScreen from '@/components/UI/GameOverScreen';
-import SettingsModal from '@/components/UI/SettingsModal';
-import StatsModal from '@/components/UI/StatsModal';
-import ParticleSystem from '@/components/Effects/ParticleSystem';
-import SoundManager from '@/components/Audio/SoundManager';
+import GameBoard from './components/Game/GameBoard';
+import GameHUD from './components/Game/GameHUD';
+import MainMenu from './components/UI/MainMenu';
+import PauseMenu from './components/UI/PauseMenu';
+import GameOverScreen from './components/UI/GameOverScreen';
+import SettingsModal from './components/UI/SettingsModal';
+import StatsModal from './components/UI/StatsModal';
+import ParticleSystem from './components/Effects/ParticleSystem';
+import SoundManager from './components/Audio/SoundManager';
 
 // 页面状态枚举
 enum GameScreen {

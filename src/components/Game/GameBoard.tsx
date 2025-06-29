@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '@/store/gameStore';
-import { GameBlock, DifficultyLevel, MathOperation } from '@/types/game';
+import { useGameStore } from '../../store/gameStore';
+import { GameBlock, DifficultyLevel, MathOperation } from '../../types/game';
 import GameBlockComponent from './GameBlock';
 
 const GRID_SIZE = 8; // 8x8 网格
